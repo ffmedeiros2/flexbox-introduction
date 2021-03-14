@@ -1,15 +1,49 @@
+/* Part 1*/
+/* Flex Container => Parent */
 ul {
   background-color: lightslategray;
   padding: 20px;
 
-  display: flex;
+  /* Flex Container Properties */
+  /* display: flex; */ /* crealtes a block container */
+  display: inline-flex; /* uses just the space necessary to render the elements + acts as though its inline, but for a flex container */
+  /* justify-content: center; */ /* with flexbox is ease to centralize elementes */
 }
 
+/* Flex Intems => Children */
 li {
+  /* display: inline-block; */ /* <- this will make the children display inline sequencially, with no control from the developer on how */
+
   list-style: none;
   color: white;
   background-color: #20b2aa;
   padding: 10px;
   margin: 20px;
   width: 100px;
+}
+
+/* Part 2 */
+/* Flex Container => Parent */
+body {
+  display: flex;
+  flex-wrap: wrap; /* makes the componente 'wrap' * to next line block if there is no more space on screen */
+}
+
+/* Flex Intems => Children */
+section {
+  width: 20rem;
+  background-color: lightslategray;
+  padding: 1.5rem;
+  margin: 1rem;
+  color: white;
+}
+
+/*section h2,
+section p {
+  background-color: #20b2aa;
+}*/
+
+div.content {
+  background-color: #20b2aa;
+  padding: 1rem;
 }
